@@ -54,7 +54,7 @@ function makeMove(index, player) {
 
 function aiMove() {
 
-  // 1. Try to win
+
   for (let condition of winningConditions) {
     let [a, b, c] = condition;
 
@@ -68,7 +68,7 @@ function aiMove() {
     }
   }
 
-  // 2. Block player from winning
+ 
   for (let condition of winningConditions) {
     let [a, b, c] = condition;
 
@@ -82,7 +82,7 @@ function aiMove() {
     }
   }
 
-  // 3. Take center if available
+  
   if (board[4] === '') {
     makeMove(4, ai);
     statusText.innerText = 'Your Turn (X)';
